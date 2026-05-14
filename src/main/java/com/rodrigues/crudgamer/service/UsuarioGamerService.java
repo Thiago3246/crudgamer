@@ -34,7 +34,7 @@ public class UsuarioGamerService {
         usuariogamer.setJogoFavorito(usuario.getJogoFavorito());
         usuariogamer.setNivel(usuario.getNivel());
 
-        return repository.save(usuario);
+        return repository.save(usuariogamer);
     }
 
     public void excluir(Long id) {

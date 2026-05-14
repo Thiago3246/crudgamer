@@ -3,6 +3,7 @@ package com.rodrigues.crudgamer.controller;
 import com.rodrigues.crudgamer.model.UsuarioGamer;
 import com.rodrigues.crudgamer.service.UsuarioGamerService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -35,6 +36,7 @@ public class UsuarioGamerController {
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void excluir(@PathVariable Long id) {
         service.excluir(id);
     }
