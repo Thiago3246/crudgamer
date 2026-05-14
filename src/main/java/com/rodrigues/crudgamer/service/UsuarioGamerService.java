@@ -23,7 +23,7 @@ public class UsuarioGamerService {
 
     public UsuarioGamer buscarPorId(Long id) {
         return repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Usuário não encontrado(a)"));
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
     }
 
     public UsuarioGamer atualizar(Long id, UsuarioGamer usuario) {
